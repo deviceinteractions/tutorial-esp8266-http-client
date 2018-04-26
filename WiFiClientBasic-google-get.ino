@@ -27,9 +27,9 @@
 #include <ESP8266HTTPClient.h>
 
 #define USE_SERIAL Serial
-#define SERVER_NAME "http://www.hmpg.net/" // put the host name here
-#define WIFI_SSID "JioFi_D0A17D"
-#define WIFI_PASS "dudefood"
+#define SERVER_NAME "http://www.hmpg.net/" // put the host name here. this is a sample
+#define WIFI_SSID "YOUR-WiFi-NAME"
+#define WIFI_PASS "YOUR-WiFi-PASSWORD"
 
 ESP8266WiFiMulti WiFiMulti;
 
