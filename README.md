@@ -15,3 +15,8 @@
     
 * Please note that the ESP8266 may face a buffer overflow while Serial-printing the received HTML file if it is too large.
 * For the purpose of this example, please try websites that are concise, like www.iamawesome.com
+
+### Breadboard Connection
+The pins D4 and D5 have been used for LED functionality.
+Pin D4 is internally connected to the onboard LED in the NodeMCU.
+Pin D5 needs to be connected to an LED via a 330 Ohm Resistor. Refer to the Connection Diagram image in the Repo.
