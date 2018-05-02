@@ -47,6 +47,8 @@ ESP8266WiFiMulti WiFiMulti;
 
 void setup() {
 
+    pinMode(D1, OUTPUT);
+    pinMode(D4, OUTPUT);
     USE_SERIAL.begin(9600); // Init Serial comms
 
     // Clear Serial buffer
@@ -67,7 +69,7 @@ void setup() {
 void loop() {
     // wait for WiFi connection
     if((WiFiMulti.run() == WL_CONNECTED)) {
-
+        digitalWrite(D4, HIGH);
 
         // configure and initiate connection with target server and url
         HTTPClient http;
@@ -84,6 +86,7 @@ void loop() {
 
             // receive response from the Server
             if(httpCode == HTTP_CODE_OK) {
+                digitalWrite(D1, LOW);
                 // On successful connection
                 USE_SERIAL.print("[HTTP] Received HTML...\n");
                 String payload = http.getString();
@@ -95,8 +98,11 @@ void loop() {
         }
 
         http.end();
+        delay(1000);
+        digitalWrite(D1, HIGH);
     }
     // 10 second delay, since we don't want to overload the target Server
+    else digitalWrite(D4, LOW);
     delay(10000);
 }
 
