@@ -1,4 +1,5 @@
 # An ESP8266 HTTP Client Tutorial with Arduino IDE
+Refer to this tutorial : https://blog.device-interactions.com/2018/04/surfing-internet-with-esp8266.html
 
 ## An example code to connect an ESP8266 to the internet via WiFi and browse webpages
 
